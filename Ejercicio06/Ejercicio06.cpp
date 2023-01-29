@@ -18,15 +18,17 @@ int main()
     }
 
     for (int i = 0; i < 10; i++) {
-        R = 0;
-        Aux = v[i];
-        for (int x = 0; x < 10; x++) {
-            if (Aux == v[x]) {
-                R++;
+        if (!banRepetido) {
+            R = 0;
+            Aux = v[i];
+            for (int x = 0; x < 10; x++) {
+                if (Aux == v[x]) {
+                    R++;
+                }
             }
-        }
-        if (R > 1) {
-            banRepetido = true;
+            if (R > 1) {
+                banRepetido = true;
+            }
         }
     }
 
