@@ -1,4 +1,4 @@
-// 3. Hacer un programa que solicite 100 nÃºmeros enteros y los guarde en un vector. 
+// 3. Hacer un programa que solicite 100 números enteros y los guarde en un vector. 
 //    Luego recorrer ese vector para calcular el promedio. Mostrar por pantalla los valores del vector que son 
 //    mayores al promedio calculado.
 
@@ -13,8 +13,9 @@ int main()
     int const numTotales = 100;
     int v[numTotales], N, Acu = 0;
     float Promedio;
- 
-    for (int i = 0; i < numTotales; i++) {
+
+    for (int i = 0; i < numTotales; i++)
+    {
         cout << i + 1 << ". Ingrese un numero: "; cin >> N;
         v[i] = N;
         Acu += v[i];
@@ -24,8 +25,10 @@ int main()
     cout << "\n-------------------------------------------" << endl;
     cout << "Promedio calculado: " << Promedio << endl;
 
-    for (int i = 0; i < numTotales; i++) {
-        if (v[i] > Promedio) {
+    for (int i = 0; i < numTotales; i++)
+    {
+        if (v[i] > Promedio)
+        {
             cout << "\nValor mayor al promedio calculado: " << v[i];
         }
     }

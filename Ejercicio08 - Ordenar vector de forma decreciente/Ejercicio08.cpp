@@ -1,5 +1,5 @@
-// 8. Se ingresa una lista de 20 nÃºmeros en un vector. Se pide ordenar dichos nÃºmeros en forma decreciente 
-//    (de mayor a menor). Mostrar el listado ordenado informando tambiÃ©n la posiciÃ³n original de cada nÃºmero
+// 8. Se ingresa una lista de 20 números en un vector. Se pide ordenar dichos números en forma decreciente 
+//    (de mayor a menor). Mostrar el listado ordenado informando también la posición original de cada número
 //    en el vector.
 
 #include <iostream>
@@ -12,15 +12,19 @@ int main()
 {
     int v[20], vPos[20], N, Aux;
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 20; i++)
+    {
         cout << i + 1 << ". Ingrese un numero: "; cin >> N;
         v[i] = N;
         vPos[i] = i + 1;
     }
 
-    for (int i = 0; i < 20; i++) {
-        for (int x = 0; x < 19; x++) {
-            if (v[x] < v[x + 1]) {
+    for (int i = 0; i < 20; i++)
+    {
+        for (int x = 0; x < 19; x++)
+        {
+            if (v[x] < v[x + 1])
+            {
                 Aux = v[x];
                 v[x] = v[x + 1];
                 v[x + 1] = Aux;
@@ -33,11 +37,14 @@ int main()
     }
 
     cout << "\n-----------------------------------------------------" << endl;
-    for (int i = 0; i < 20; i++) {
-        if (i < 19) {
+    for (int i = 0; i < 20; i++)
+    {
+        if (i < 19)
+        {
             cout << v[i] << " (" << vPos[i] << "), ";
         }
-        else {
+        else
+        {
             cout << v[i] << " (" << vPos[i] << ").";
         }
     }

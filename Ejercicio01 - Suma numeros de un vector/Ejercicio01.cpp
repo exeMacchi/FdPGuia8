@@ -1,5 +1,5 @@
-// 1. Hacer un programa que solicite 50 nÃºmeros enteros y los guarde en un vector. 
-//    Luego recorrer el vector y determinar e informar cuÃ¡l es la suma de los valores del mismo.
+// 1. Hacer un programa que solicite 50 números enteros y los guarde en un vector. 
+//    Luego recorrer el vector y determinar e informar cuál es la suma de los valores del mismo.
 
 #include <iostream>
 
@@ -11,12 +11,14 @@ int main()
 {
     int v[50], N, acu = 0;
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 50; i++)
+    {
         cout << i + 1 << ". Ingrese un numero: "; cin >> N;
         v[i] = N;
     }
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 50; i++)
+    {
         acu += v[i];
     }
 

@@ -1,5 +1,5 @@
-// 2. Hacer un programa que solicite 50 n√∫meros enteros y los guarde en un vector. 
-//    Luego recorrer todos los elementos del vector y determinar cu√°l es el valor m√°ximo y su posici√≥n dentro del vector.
+// 2. Hacer un programa que solicite 50 n˙meros enteros y los guarde en un vector. 
+//    Luego recorrer todos los elementos del vector y determinar cu·l es el valor m·ximo y su posiciÛn dentro del vector.
 
 #include <iostream>
 
@@ -11,17 +11,21 @@ int main()
 {
     int v[50], N, vMax, pMax;
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 50; i++)
+    {
         cout << i + 1 << ". Ingrese un numero: "; cin >> N;
         v[i] = N;
     }
 
-    for (int i = 0; i < 50; i++) {
-        if (i == 0) {
+    for (int i = 0; i < 50; i++)
+    {
+        if (i == 0)
+        {
             vMax = v[i];
             pMax = i + 1;
         }
-        else if (v[i] > vMax) {
+        else if (v[i] > vMax)
+        {
             vMax = v[i];
             pMax = i + 1;
         }

@@ -1,14 +1,17 @@
-// 5. Hacer un programa que solicite una serie de valores de tipo char (caracteres). 
-//    Se entiende por carÃ¡cter a cada elemento que se obtiene de presionar una tecla. 
-//    Por ejemplo el valor â€œ25â€ tiene dos caracteres (si quisiÃ©ramos guardarlo en variables enteras nos alcanza 
-//    con una, pero si queremos guardarlo en variables char, necesitaremos dos); la frase â€œmaxi programaâ€ tiene 13 
-//    (se incluye el espacio como un carÃ¡cter).
-//    La cantidad de valores serÃ¡ como mÃ¡ximo 50, pero el programa puede cortar antes si se ingresa el carÃ¡cter â€œ.â€ 
-//    (punto). Una vez cargado el vector de char, recorrerlo y reemplazar todas las apariciones de la letra â€œaâ€ por 
-//    la letra â€œeâ€, por ejemplo :
-//       Vector char original: â€œHola muchachada cÃ³mo estÃ¡nâ€.
-//       Vector char modificado: â€œHole muchechede cÃ³mo estenâ€.
-//    Finalmente, mostrar el resultado en pantalla.
+/*
+   5. Hacer un programa que solicite una serie de valores de tipo char (caracteres).
+      Se entiende por carácter a cada elemento que se obtiene de presionar una tecla.
+      Por ejemplo el valor “25” tiene dos caracteres (si quisiéramos guardarlo en variables enteras nos alcanza
+      con una, pero si queremos guardarlo en variables char, necesitaremos dos); la frase “maxi programa” tiene 13
+      (se incluye el espacio como un carácter).
+      La cantidad de valores será como máximo 50, pero el programa puede cortar antes si se ingresa el carácter “.”
+      (punto). Una vez cargado el vector de char, recorrerlo y reemplazar todas las apariciones de la letra “a” por
+      la letra “e”, por ejemplo :
+         Vector char original: “Hola muchachada cómo están”.
+         Vector char modificado: “Hole muchechede cómo esten”.
+      Finalmente, mostrar el resultado en pantalla.
+*/
+
 
 #include <iostream>
 
@@ -23,18 +26,22 @@ int main()
 
     cout << "Escriba: "; cin.getline(vChar, 50, '\n');
 
-    for (int i = 0; i < 50; i++) {
-        if (vChar[i] == 'a') {
+    for (int i = 0; i < 50; i++)
+    {
+        if (vChar[i] == 'a')
+        {
             vChar[i] = 'e';
         }
-        else if (vChar[i] == 'A') {
+        else if (vChar[i] == 'A')
+        {
             vChar[i] = 'E';
         }
     }
 
     i = 0;
     cout << endl;
-    while (vChar[i] != '\0') {
+    while (vChar[i] != '\0')
+    {
         cout << vChar[i];
         i++;
     }

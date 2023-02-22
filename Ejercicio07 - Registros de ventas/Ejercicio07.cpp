@@ -1,12 +1,14 @@
-// 7. Una empresa comercializa 15 tipos de artÃ­culos y por cada venta realizada genera un registro con los 
-//    siguientes datos:
-//       â€¢ NÃºmero de artÃ­culo (1 a 15).
-//       â€¢ Cantidad vendida.
-//    Puede haber varios registros para el mismo artÃ­culo y el Ãºltimo se indica nÃºmero de artÃ­culo igual a cero.
-//    Se pide determinar e informar :
-//       a. El nÃºmero de artÃ­culo que mÃ¡s se vendiÃ³ en total.
-//       b. Los nÃºmeros de artÃ­culos que no registraron ventas.
-//       c. La cantidad de unidades vendidas para el artÃ­culo nÃºmero 10.
+/*
+   7. Una empresa comercializa 15 tipos de artículos y por cada venta realizada genera un registro con los
+      siguientes datos:
+         • Número de artículo (1 a 15).
+         • Cantidad vendida.
+      Puede haber varios registros para el mismo artículo y el último se indica número de artículo igual a cero.
+      Se pide determinar e informar :
+         a. El número de artículo que más se vendió en total.
+         b. Los números de artículos que no registraron ventas.
+         c. La cantidad de unidades vendidas para el artículo número 10.
+*/
 
 #include <iostream>
 
@@ -18,38 +20,47 @@ int main()
 {
     int vAcu[15], numArt, canVendida, x, maxAcu, maxNumArtVen;
 
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 15; i++)
+    {
         vAcu[i] = 0;
     }
 
     cout << "Numero de articulo (1-15): "; cin >> numArt;
-    if (numArt >= 1 && numArt <= 15) {
+    if (numArt >= 1 && numArt <= 15)
+    {
         cout << "Cantidad vendida: "; cin >> canVendida;
     }
-    else {
+    else
+    {
         cout << "\nError: escriba un numero entre 1 y 15 (inclusives)." << endl;
         return 0;
     }
 
-    while (numArt != 0) {
+    while (numArt != 0)
+    {
         x = numArt - 1;
         vAcu[x] += canVendida;
 
         cout << "\nNumero de articulo (1-15): "; cin >> numArt;
-        if (numArt != 0 && (numArt >= 1 && numArt <= 15)) {
+        if (numArt != 0 && (numArt >= 1 && numArt <= 15))
+        {
             cout << "Cantidad vendida: "; cin >> canVendida;
         }
-        else {
+        else
+        {
             break;
         }
     }
 
-    for (int i = 0; i < 15; i++) {
-        if (i == 0) {
+    for (int i = 0; i < 15; i++)
+    {
+        if (i == 0)
+        {
             maxAcu = vAcu[i];
             maxNumArtVen = i + 1;
         }
-        else if (vAcu[i] > maxAcu) {
+        else if (vAcu[i] > maxAcu)
+        {
             maxAcu = vAcu[i];
             maxNumArtVen = i + 1;
         }
@@ -57,15 +68,18 @@ int main()
 
     cout << "\n---------------------------------------------------------";
 
-    cout << "\nEl numero del articulo que mas se vendio en total: " << maxNumArtVen << " (" << maxAcu 
-         << " articulos vendidos)" << endl;
+    cout << "\nEl numero del articulo que mas se vendio en total: " << maxNumArtVen << " (" << maxAcu
+        << " articulos vendidos)" << endl;
 
-    if (vAcu[9] > 0) {
+    if (vAcu[9] > 0)
+    {
         cout << "\nEl articulo numero 10 vendio " << vAcu[9] << " unidades en total." << endl;
     }
 
-    for (int i = 0; i < 15; i++) {
-        if (vAcu[i] == 0) {
+    for (int i = 0; i < 15; i++)
+    {
+        if (vAcu[i] == 0)
+        {
             cout << "\nEl numero de articulo " << i + 1 << " no registro ninguna venta.";
         }
     }
